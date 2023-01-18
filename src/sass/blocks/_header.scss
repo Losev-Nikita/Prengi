@@ -1,0 +1,146 @@
+.header {
+    margin-bottom: 25px;
+
+    &__wrapper {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0 140px 0;
+    }
+
+    &__menu {
+        width: 540px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        &-item {
+            text-transform: uppercase;
+
+            a {
+                @include roboto_bold;
+                font-size: 13px;
+                line-height: 26px;
+                color: #fff;
+                &:hover {
+                    color: #00c2f0
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        &-title {
+            @include roboto_black;
+            font-size: 42px;
+            line-height: 48px;
+            color: #fff;
+            width: 530px;
+            margin-bottom: 28px;
+        }
+
+        &-text {
+            width: 428px;
+            @include roboto_light;
+            font-size: 24px;
+            line-height: 30px;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        &-btn {
+            height: 60px;
+            width: 240px;
+            background-color: #00c2f0;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+            @include roboto_bold;
+            border: none;
+            border-radius: 5px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 132px;
+        right: 190px;
+    }
+
+    &__carousel {
+        position: relative;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        bottom: 70px;
+        border: none;
+        background-color: transparent;
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+            border: none;
+            background-color: transparent;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .prev {
+        left: 49%;
+        transform: translateX(-30%);
+    }
+
+    .next {
+        right: 44%;
+        transform: translateX(50%);
+    }
+
+    .tns {
+        &-nav {
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            bottom: 70px;
+
+            button {
+                width: 11px;
+                height: 11px;
+                border: 1px solid #fff;
+                background-color: transparent;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: #fff;
+                    outline: none;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+
+            button+button {
+                margin-left: 3px;
+            }
+
+        }
+    }
+}

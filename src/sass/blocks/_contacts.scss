@@ -1,0 +1,22 @@
+.contacts {
+    height: 75px;
+    padding-top: 20px;
+    margin-bottom: 16px;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 228px);
+        @include roboto_light;
+        font-size: 11px;
+        line-height: 18px;
+
+        &-item {
+            display: grid;
+            grid-template-columns: 28px 203px;
+        }
+
+        &-info {
+            padding-left: 12px;
+        }
+    }
+}
